@@ -89,7 +89,7 @@ void CPU::step() {
             std::cout << (char)(value & 0xFF) << std::flush;
         }
         else if (addr == 0xFF02) {
-            std::cout << value << std::flush;
+            std::cout << std::dec << value << std::flush;
         }
         else {
             memory.write16(addr, value);
