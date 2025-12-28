@@ -76,33 +76,6 @@ asp-16/
 - десятичные и шестнадцатеричные числа
 - строгую валидацию аргументов
 
-### Пример программы
-
-```asm
-start:
-    mov ax, 72
-    store ax, 0xFF00
-
-    mov ax, 101
-    store ax, 0xFF00
-
-    mov ax, 108
-    store ax, 0xFF00
-
-    mov ax, 108
-    store ax, 0xFF00
-
-    mov ax, 111
-    store ax, 0xFF00
-
-    mov ax, 10
-    store ax, 0xFF00
-
-    mov ax, 1337
-    store ax, 0xFF02
-
-    hlt
-````
 ---
 
 ## 🖨 Memory-Mapped I/O
