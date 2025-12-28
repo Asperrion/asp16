@@ -1,5 +1,7 @@
 #pragma once
 
+#include "../src/util/types.h"
+
 enum Opcode : u8 {
     OP_NOP = 0x00,
     OP_MOV_IMM = 0x01,
