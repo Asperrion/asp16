@@ -40,6 +40,7 @@ asp-16/
 ├── programs/         # Программы для запуска
 │   └── test.asmp
 │
+├── asmp.md           # Документация ассемблера
 ├── ISA.md            # Документация ISA
 ├── README.md
 └── Makefile
