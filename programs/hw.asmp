@@ -1,0 +1,48 @@
+; программа вывода "Hello, World!" на экран.
+
+; регистры для выводов:
+; 0xFF00 - вывод символов. Вход - HEX коды символов
+; 0xFF02 - вывод чисел. Вход - число или HEX код числа
+
+mov sp, 0x8000   ; переносим стек в пустую часть памяти для безопасности (что бы при обработке процессор не уходил в исключения)
+
+mov ax, 0x48     ; 'H'
+store ax, 0xFF00
+
+mov ax, 0x65     ; 'e'
+store ax, 0xFF00
+
+mov ax, 0x6C     ; 'l'
+store ax, 0xFF00
+
+mov ax, 0x6C     ; 'l'
+store ax, 0xFF00
+
+mov ax, 0x6F     ; 'o'
+store ax, 0xFF00
+
+mov ax, 0x2C     ; ','
+store ax, 0xFF00
+
+mov ax, 0x20     ; ' '
+store ax, 0xFF00
+
+mov ax, 0x77     ; 'w'
+store ax, 0xFF00
+
+mov ax, 0x6F     ; 'o'
+store ax, 0xFF00
+
+mov ax, 0x72     ; 'r'
+store ax, 0xFF00
+
+mov ax, 0x6C     ; 'l'
+store ax, 0xFF00
+
+mov ax, 0x64     ; 'd'
+store ax, 0xFF00
+
+mov ax, 0x21     ; '!'
+store ax, 0xFF00
+
+hlt
