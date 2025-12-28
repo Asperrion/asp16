@@ -101,7 +101,7 @@ start:
 
     hlt
 ````
-Подробнее см. в [`asmp.md`](asmp.md).
+###Подробнее см. в [`asmp.md`](asmp.md).
 ---
 
 ## 🖨 Memory-Mapped I/O
