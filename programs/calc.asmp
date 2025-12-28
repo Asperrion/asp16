@@ -1,0 +1,73 @@
+; программа сложения двух чисел!
+
+mov sp, 0x8000   ; переносим стек в безопасную часть памяти
+
+; блок вывода ASP16 - DEMO CALC
+mov ax, 0x41     ; 'A'
+store ax, 0xFF00
+
+mov ax, 0x53     ; 'S'
+store ax, 0xFF00
+
+mov ax, 0x50     ; 'P'
+store ax, 0xFF00
+
+mov ax, 16       ; 16
+store ax, 0xFF02
+
+mov ax, 0x20     ; ' '
+store ax, 0xFF00
+
+mov ax, 0x2D     ; '-'
+store ax, 0xFF00
+
+mov ax, 0x20     ; ' '
+store ax, 0xFF00
+
+mov ax, 0x44     ; 'D'
+store ax, 0xFF00
+
+mov ax, 0x45     ; 'E'
+store ax, 0xFF00
+
+mov ax, 0x4D     ; 'M'
+store ax, 0xFF00
+
+mov ax, 0x4F     ; 'O'
+store ax, 0xFF00
+
+mov ax, 0x20     ; ' '
+store ax, 0xFF00
+
+mov ax, 0x43     ; 'C'
+store ax, 0xFF00
+
+mov ax, 0x41     ; 'A'
+store ax, 0xFF00
+
+mov ax, 0x4C     ; 'L'
+store ax, 0xFF00
+
+mov ax, 0x43     ; 'C'
+store ax, 0xFF00
+
+mov ax, 0x0A     ; '\n'
+store ax, 0xFF00
+
+; блок сложения чисел
+mov ax, 22       ; кладем 22 в ax
+mov bx, 30       ; кладем 30 в bx
+
+store ax, 0xFF02 ; 22 на экран
+
+mov cx, 0x2B     ; '+'
+store cx, 0xFF00 ; '+' на экран
+
+store bx, 0xFF02 ; 30 на экран
+
+mov cx, 0x3D     ; '='
+store cx, 0xFF00 ; '=' на экран
+
+add ax, bx       ; складываем ax и bx
+store ax, 0xFF02 ; 52 на экран
+hlt              ; выходим из функции
