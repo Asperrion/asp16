@@ -5,7 +5,7 @@
 #include <unordered_map>
 #include <cstring>
 
-#include "isa.h"
+#include "../src/cpu/isa.h"
 #include "../src/util/types.h"
 
 static std::string trim(const std::string& s) {
